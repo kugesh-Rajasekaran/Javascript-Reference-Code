@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <script type="text/javascript">
+            
+            function fun(){
+                var a=document.getElementById("inp").value;
+
+                var b=document.getElementById("but");
+var r=/[a-c]bc/;
+if(r.test(a)){
+    document.getElementById("lab").style.visibility="hidden";
+    alert("founded");
+}
+else{
+    document.getElementById("lab").style.visibility="visible";
+}
+            }
+            
+            
+            </script>
+
+
+    </head>
+    <body>
+        <input id="inp" placeholder="enter_Text">
+        <label id="lab" style="color: red;visibility:hidden">Invalid Username</label>
+        <button id="but" onclick="fun()" type="button">click me</button>
+    </body>
+</html>

@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <script type="text/javascript">
+        function fun(){
+
+var a=document.getElementById("txt");
+
+var b=document.getElementById("pass");
+if(a.value==""){
+    //alert("enter user");
+    a.style.border="solid 3px red";
+    document.getElementById("lab").style.visibility="visible";
+    return false;
+}
+else if(b.value.trim()==""){
+    
+    alert("enter pass");
+    return false;
+}
+else if(b.value.trim().length<5){
+    alert("pass is too small");
+    return false;
+}
+else{
+    return true;
+}
+        }
+        
+        </script>
+    </head>
+    <body>
+        <form onsubmit="return fun()" action="ref.html">
+        <input id="txt" placeholder="enter_name" type="text"/>
+        <br><br>
+        <input id="pass" placeholder="enter_pass" type="password"/>
+        <br><br>
+        <button type="submit">click me</button>
+        <label id="lab" style="color: red; visibility:hidden;">Invalid</label>
+
+        
+        </form>
+    </body>
+</html>

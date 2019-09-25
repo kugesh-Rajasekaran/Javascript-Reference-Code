@@ -1,0 +1,42 @@
+<html>
+
+<head>
+    <script type="text/javascript">
+function fun(){
+
+
+    var a=document.getElementById("first");
+    var b=document.getElementById("second");
+    if(a.value.trim()=="" || b.value.trim()=="")
+{
+    alert("enter valid data");
+    return false;
+}
+else{
+    return true;
+}
+}
+</script>
+</head>
+<body>
+
+<form onsubmit="return fun()" action="ref.html">
+
+<input id="first" placeholder="enter_name" type="text" >
+
+<input id="sec" placeholder="pass" type="password" >
+
+<button type="submit" >click me</button>
+
+
+
+</form>
+
+
+</body>
+
+
+
+
+
+</html>

@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <h1>hello!! welcome</h1>
+        <script>
+        
+        function fun(){
+var first=document.getElementById("rb1") ;
+var second=document.getElementById("rb2");
+if(first.checked==true)
+alert("first is checked "+first.value);
+
+else if(second.checked==true)
+alert("second is checked "+second.value);
+else
+alert("nothing is checked");
+
+
+        }
+        
+        
+        
+        </script>
+    </head>
+    <body>
+        <input id="rb1" type="radio" value="first_button" >first</input>
+        <br>
+        <input id="rb2" type="radio" value="second_button">second</first>
+        <br>
+        <button onclick="fun()">click me</button>
+    </body>
+</html>

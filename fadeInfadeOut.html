@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <script type="text/javascript">
+        
+        var opacity=0;
+        var inter=0;
+        function fadeout(){
+            inter=setInterval(hide,200);
+        }
+        function hide(){
+var img=document.getElementById("imag");
+opacity=window.getComputedStyle(img).getPropertyValue("opacity");
+if(opacity>0){
+opacity=opacity-0.1;
+img.style.opacity=opacity;
+
+
+}
+else{
+    clearInterval(inter);
+}
+        }
+        
+        function fadein(){
+            inter=setInterval(show,200);
+        }
+
+        function show(){
+img=document.getElementById("imag");
+opacity=Number(window.getComputedStyle(img).getPropertyValue("opacity"));
+if(opacity<1){
+    opacity=opacity+0.1
+    img.style.opacity=opacity;
+}
+else{
+    clearInterval(inter);
+}
+
+        }
+        </script>
+    </head>
+    <body>
+        <button id="first" onclick="fadeout()">fade out</button>
+        <br>
+        <img id="imag" src="C:\Users\Kugesh\Documents\js\Wl Prabakar Na 20180722_232343.jpg">
+ <br>
+ <button id="sec" onclick="fadein()">fade in</button> 
+    </body>
+</html>

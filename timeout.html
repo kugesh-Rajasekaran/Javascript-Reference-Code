@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <script type="text/javascript">
+        var a=0;
+        var sec=0;
+function fun(){
+    document.getElementById("line").innerHTML=sec +"seconds";
+    sec++;
+    }
+
+    /*    function sett(){
+           a=window.setTimeout(fun,5000);
+
+        }
+
+        function cleart(){
+            window.clearTimeout(a);
+        }*/
+        
+        function sett(){
+           a=window.setInterval(fun,1000);
+
+        }
+
+        function cleart(){
+            window.clearTimeout(a);
+        }
+
+        </script>
+    </head>
+    <button onclick="sett()">start</button>
+    <h1 id="line">initial</h1>
+    <button onclick="cleart()">stop</button>
+</html>
